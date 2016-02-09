@@ -7,3 +7,8 @@ TODO: list
 # 10. Separate domains on folders
 # 13. Add transactions
 # 14. Add validators for every controller method
+
+---TESTS----
+
+# 1. Move token to separated function or something else.
+# 2. Move logic from './bin/test.js' to './app/tests/unit/index.js'

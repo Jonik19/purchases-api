@@ -15,9 +15,7 @@ var sequelize = new Sequelize(config.db.database, config.db.user, config.db.pass
 
   define: {
     charset: 'utf8'
-  },
-
-  force: false
+  }
 });
 
 

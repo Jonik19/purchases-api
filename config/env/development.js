@@ -8,7 +8,8 @@ module.exports = {
     user: 'purchases_admin',
     password: 'dadada',
     database: 'purchases',
-    host: 'localhost'
+    host: 'localhost',
+    force: false
   },
   cors: {
     maxAge: 60 * 60 * 24 * 7, // one week,
