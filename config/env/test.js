@@ -43,6 +43,11 @@ module.exports = {
     rooms: {
       room: {
         name: 'My room'
+      },
+      user: {
+        name: 'Danil2',
+        username: 'Jonik2',
+        password: 'dadada2'
       }
     }
   }
