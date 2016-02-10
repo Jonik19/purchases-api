@@ -59,3 +59,17 @@ To change environment change NODE_ENV variable in `package.json start script`.
 To add new environment add new file to `./config/env/{env}.js` and add exporting newly created
 environment to `./config/index.js` - it's same to another already existed environments.
 
+
+## Tests
+
+### Running
+
+Before running tests change settings for your database in `./config/env/test`.
+
+#### Controllers tests
+
+`npm run test-controller`
+
+#### Unit tests
+
+`npm run test-unit`
