@@ -6,7 +6,7 @@ module.exports = function (request, config, share) {
   var helper = {};
 
   /**
-   * Creates room by specified data and assigns response to share object
+   * Creates room by specified data and assigns response to 'rooms' share object
    * in specified field.
    *
    * @param {Object} options
@@ -36,7 +36,8 @@ module.exports = function (request, config, share) {
   };
 
   /**
-   * Generates approve token
+   * Generates approve token and assigns response to 'rooms' share object
+   * in specified field.
    *
    * @param {Object} options
    * @param {String|Number} options.roomId ID of the room to get link for.
@@ -47,19 +48,19 @@ module.exports = function (request, config, share) {
    */
 
   helper.generateApproveToken = function (options, done) {
-      let roomId = options.roomId;
+    let roomId = options.roomId;
 
-      request
-        .get(`/rooms/${roomId}/approve`)
-        .set('Authorization', options.token)
-        .expect(function (res) {
-          expect(res.body).to.be.an('object');
-          expect(res.body.response).to.be.an('string');
-        })
-        .expect(function (res) {
-          share.rooms[options.field] = res.body.response;
-        })
-        .expect(200, done);
+    request
+      .get(`/rooms/${roomId}/approve`)
+      .set('Authorization', options.token)
+      .expect(function (res) {
+        expect(res.body).to.be.an('object');
+        expect(res.body.response).to.be.an('string');
+      })
+      .expect(function (res) {
+        share.rooms[options.field] = res.body.response;
+      })
+      .expect(200, done);
     };
 
   return helper;
