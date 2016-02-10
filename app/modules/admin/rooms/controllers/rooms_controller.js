@@ -73,7 +73,7 @@ controller.generateApprove = function *() {
   };
 
   // Check user existing in this room
-  // TODO: check for owner. Only founder can generate approve links.
+  // TODO: check for owner. Only founder can generate approve links. ---->>> May be <<<----
   yield UserRepo.assertUserInRoom(data);
 
   let link = yield RoomRepo.generateApproveLink(data);

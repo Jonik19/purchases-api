@@ -87,7 +87,7 @@ repo.assertUserInRoom = function (options) {
     .then(function (users) {
       // User is not in the room
       if(users.length === 0) {
-        throw new errors.IncorrectDataError();
+        throw new errors.IncorrectDataError('You are not in this room');
       }
 
       return users;
