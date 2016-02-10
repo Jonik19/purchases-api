@@ -30,7 +30,8 @@ var shareObject = {};
 
 var tests = [
   require('../app/tests/unit/authentication_controller_spec'),
-  require('../app/tests/unit/admin/rooms_controller_spec')
+  require('../app/tests/unit/admin/rooms_controller_spec'),
+  require('../app/tests/unit/admin/users_controller_spec')
 ];
 
 /**

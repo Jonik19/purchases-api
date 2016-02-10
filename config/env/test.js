@@ -49,6 +49,13 @@ module.exports = {
         username: 'Jonik2',
         password: 'dadada2'
       }
+    },
+    users: {
+      user: {
+        name: 'Danil3',
+        username: 'Jonik3',
+        password: 'dadada3'
+      }
     }
   }
 };
