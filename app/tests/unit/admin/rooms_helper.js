@@ -61,4 +61,6 @@ module.exports = function (request, config, share) {
         })
         .expect(200, done);
     };
+
+  return helper;
 };
