@@ -62,14 +62,28 @@ environment to `./config/index.js` - it's same to another already existed enviro
 
 ## Tests
 
-### Running
+### Controllers tests
 
 Before running tests change settings for your database in `./config/env/test`.
+All controllers tests are located in ./app/tests/controllers.
 
-#### Controllers tests
+#### Adding new test
+
+To add new test create file {name}_spec.js in './app/tests/controllers' folder
+and `require` it in './app/tests/controllers/index.js' file in `tests` array.
+
+#### Run
 
 `npm run test-controller`
 
-#### Unit tests
+### Unit tests
+
+#### Adding new test
+
+To add new test create file {name}_spec.js and place it anywhere except './app/tests/controller' folder.
+
+#### Run
 
 `npm run test-unit`
+
+
